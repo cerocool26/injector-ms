@@ -14,6 +14,7 @@ public class ImplementTestMapper implements TestMapper {
         test.setPrueba(requestTest.getPrueba());
         test.setRangoOperacion(requestTest.getRangoOperacion());
         test.setDatosInyector(requestTest.getDatosInyector());
+        test.setTipoInyector(requestTest.getTipoInyector());
         return test;
     }
 }
