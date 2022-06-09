@@ -11,8 +11,8 @@ import java.util.UUID;
 public class Test {
 
     @Id
-    @Column(name = "codigo_cliente", nullable = false, unique = true)
-    private UUID codigoPrueba = UUID.randomUUID();
+    @Column(name = "primary_key", nullable = false, unique = true)
+    private UUID primaryKey = UUID.randomUUID();
 
     private String prueba;
 
@@ -25,22 +25,26 @@ public class Test {
     @Column(name = "tipo_inyector")
     private String tipoInyector;
 
+    @Column(name = "cod_prueba")
+    private String codPrueba;
+
     public Test(){}
 
-    public Test(UUID codigoPrueba, String prueba, String rangoOperacion, Double datosInyector, String tipoInyector) {
-        this.codigoPrueba = codigoPrueba;
+    public Test(UUID primaryKey, String prueba, String rangoOperacion, Double datosInyector, String tipoInyector, String codPrueba) {
+        this.primaryKey = primaryKey;
         this.prueba = prueba;
         this.rangoOperacion = rangoOperacion;
         this.datosInyector = datosInyector;
         this.tipoInyector = tipoInyector;
+        this.codPrueba = codPrueba;
     }
 
-    public UUID getCodigoPrueba() {
-        return codigoPrueba;
+    public UUID getPrimaryKey() {
+        return primaryKey;
     }
 
-    public void setCodigoPrueba(UUID codigoPrueba) {
-        this.codigoPrueba = codigoPrueba;
+    public void setPrimaryKey(UUID primaryKey) {
+        this.primaryKey = primaryKey;
     }
 
     public String getPrueba() {
@@ -73,5 +77,13 @@ public class Test {
 
     public void setTipoInyector(String tipoInyector) {
         this.tipoInyector = tipoInyector;
+    }
+
+    public String getCodPrueba() {
+        return codPrueba;
+    }
+
+    public void setCodPrueba(String codPrueba) {
+        this.codPrueba = codPrueba;
     }
 }

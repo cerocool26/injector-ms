@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Repository
 public interface TestRepository extends JpaRepository<Test,Long> {
-    @Query("SELECT t From Test AS t WHERE t.codigoPrueba = :code")
+    @Query("SELECT t From Test AS t WHERE t.primaryKey = :code")
     Test findByCodeTest(UUID code);
 
 }

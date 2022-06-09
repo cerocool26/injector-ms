@@ -7,11 +7,14 @@ public class RequestTest {
     private Double datosInyector;
     private String tipoInyector;
 
-    public RequestTest(String prueba, String rangoOperacion, Double datosInyector, String tipoInyector) {
+    private String codPrueba;
+
+    public RequestTest(String prueba, String rangoOperacion, Double datosInyector, String tipoInyector, String codPrueba) {
         this.prueba = prueba;
         this.rangoOperacion = rangoOperacion;
         this.datosInyector = datosInyector;
         this.tipoInyector = tipoInyector;
+        this.codPrueba =  codPrueba;
     }
 
     public String getPrueba() {
@@ -44,5 +47,13 @@ public class RequestTest {
 
     public void setTipoInyector(String tipoInyector) {
         this.tipoInyector = tipoInyector;
+    }
+
+    public String getCodPrueba() {
+        return codPrueba;
+    }
+
+    public void setCodPrueba(String codPrueba) {
+        this.codPrueba = codPrueba;
     }
 }
